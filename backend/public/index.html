@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Currently Playing</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .album-art {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        .song-info {
+            text-align: center;
+        }
+        .song-info h2 {
+            margin: 0;
+        }
+        .song-info p {
+            margin: 5px 0;
+        }
+        .api-info {
+            margin-top: 20px;
+        }
+        .api-info p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="album-art" id="album-art" src="" alt="Album Art">
+        <div class="song-info" id="song-info">
+            <h2 id="song-title"></h2>
+            <p id="artist">by <span id="artist-name"></span></p>
+            <p id="progress"></p>
+        </div>
+        <div class="api-info" id="api-info">
+            <p>API calls: <span id="api-calls">0</span></p>
+            <p>Cached data: <span id="cached-data">false</span></p>
+        </div>
+    </div>
+    <button id="refresh-button">Refresh</button>
+    <script src="script.js"></script>
+</body>
+</html>
